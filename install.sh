@@ -31,7 +31,7 @@ else
 fi
 
 
-URL="https://github.com/wiedehopf/airspy-conf/raw/master"
+URL="https://github.com/adsbfi/airspy-conf/raw/master"
 
 OS="buster"
 required_libc="libc-2.28.so"
@@ -76,7 +76,7 @@ fi
 
 
 # ------------------
-repository=https://raw.githubusercontent.com/wiedehopf/airspy-conf/master
+repository=https://raw.githubusercontent.com/adsbfi/airspy-conf/master
 systemctl stop airspy_adsb &>/dev/null || true
 cp -f airspy_adsb /usr/local/bin/
 
@@ -115,8 +115,8 @@ if [[ -f /boot/piaware-config.txt ]] && { piaware-config -show manage-config | g
 else
 	if ! command -v dump1090-fa &>/dev/null && ! command -v readsb &>/dev/null; then
         echo "Please install readsb or dump1090-fa before installing airspy-conf!"
-        echo "https://github.com/wiedehopf/adsb-scripts/wiki/Automatic-installation-for-dump1090-fa"
-        echo "https://github.com/wiedehopf/adsb-scripts/wiki/Automatic-installation-for-readsb"
+        echo "https://github.com/adsbfi/adsb-scripts/wiki/Automatic-installation-for-dump1090-fa"
+        echo "https://github.com/adsbfi/adsb-scripts/wiki/Automatic-installation-for-readsb"
         exit 1
 	fi
 
