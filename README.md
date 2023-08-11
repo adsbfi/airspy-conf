@@ -10,18 +10,18 @@ It should work very well for example on a piaware-sd card image :)
 A normal Raspbian sd card image also works well.
 
 If you are on a normal PC laptop and not on an RPi, i'd recommend using readsb instead of dump1090-fa:
-https://github.com/wiedehopf/adsb-scripts/wiki/Automatic-installation-for-readsb
+https://github.com/adsbfi/adsb-scripts/wiki/Automatic-installation-for-readsb
 
 Generally readsb might be nicer than dump1090-fa. Just to reiterate, this needs to be done before running this script.
 Or you can rerun this install script after installing readsb. You'll have to reconfigure airspy_adsb as this install overwrites the configuration.
 
 Content:
 
-* [Installation](https://github.com/wiedehopf/airspy-conf#installation)
-* [Other feeders](https://github.com/wiedehopf/airspy-conf#other-feeders)
-* [Changing airspy options](https://github.com/wiedehopf/airspy-conf#Changing-airspy_adsb-options)
-* [Uninstall](https://github.com/wiedehopf/airspy-conf#Uninstall)
-* [Update](https://github.com/wiedehopf/airspy-conf#Update)
+* [Installation](https://github.com/adsbfi/airspy-conf#installation)
+* [Other feeders](https://github.com/adsbfi/airspy-conf#other-feeders)
+* [Changing airspy options](https://github.com/adsbfi/airspy-conf#Changing-airspy_adsb-options)
+* [Uninstall](https://github.com/adsbfi/airspy-conf#Uninstall)
+* [Update](https://github.com/adsbfi/airspy-conf#Update)
 
 ---
 
@@ -30,7 +30,7 @@ Content:
 Overwrites the configuration at /etc/default/airspy_adsb
 
 ```shell
-sudo bash -c "$(wget -O - https://raw.githubusercontent.com/wiedehopf/airspy-conf/master/install.sh)"
+sudo bash -c "$(wget -O - https://raw.githubusercontent.com/adsbfi/airspy-conf/master/install.sh)"
 ```
 
 Check that it's running by looking at the log:
@@ -49,7 +49,7 @@ sudo bash install.sh only-airspy
 Update / download airspy_adsb to /usr/local/bin while preserving options in /etc/default/airspy_adsb
 
 ```shell
-sudo bash -c "$(wget -O - https://raw.githubusercontent.com/wiedehopf/airspy-conf/master/update-binary.sh)"
+sudo bash -c "$(wget -O - https://raw.githubusercontent.com/adsbfi/airspy-conf/master/update-binary.sh)"
 ```
 
 
@@ -114,7 +114,7 @@ sudo journalctl -u airspy_adsb -ef
 Disables the airspy_adsb service, restores the readsb / dump1090-fa configuration and resets the piaware configuration to the default:
 
 ```shell
-sudo bash -c "$(wget -O - https://raw.githubusercontent.com/wiedehopf/airspy-conf/master/uninstall.sh)"
+sudo bash -c "$(wget -O - https://raw.githubusercontent.com/adsbfi/airspy-conf/master/uninstall.sh)"
 ```
 
 ---
@@ -131,7 +131,7 @@ Just point them to port 30005 (beast protocol).
 
 ### Install / update the helper scripts:
 ```
-wget -O - https://raw.githubusercontent.com/wiedehopf/airspy-conf/master/clone-airspy-conf.sh | sudo bash
+wget -O - https://raw.githubusercontent.com/adsbfi/airspy-conf/master/clone-airspy-conf.sh | sudo bash
 ```
 
 ### Record a sample:
