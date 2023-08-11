@@ -31,7 +31,7 @@ else
 fi
 
 
-URL="https://github.com/wiedehopf/airspy-conf/raw/master"
+URL="https://github.com/adsbfi/airspy-conf/raw/master"
 
 OS="buster"
 required_libc="libc-2.28.so"
