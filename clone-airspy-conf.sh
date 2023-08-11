@@ -19,7 +19,7 @@ function getGIT() {
     return 0
 }
 target=/usr/local/share/airspy-conf
-repo=https://github.com/wiedehopf/airspy-conf.git
+repo=https://github.com/adsbfi/airspy-conf.git
 
 getGIT "$repo" "master" "$target" || { echo "Failed to load the repository!"; exit 1; }
 
